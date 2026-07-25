@@ -13,11 +13,9 @@ The application consists of:
 
 **Landing Page**
 
-> *Add deployed frontend URL here*
+> *https://digital-heroes-assignment-ypbj.onrender.com*
 
-**Admin Login**
 
-> *Add deployed admin URL here*
 
 ---
 
@@ -232,7 +230,7 @@ backend/
 ## Clone
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/The-Harsh-Kaushal/digital_heroes_assignment.git
 ```
 
 ---

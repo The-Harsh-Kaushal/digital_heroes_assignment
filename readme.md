@@ -26,13 +26,13 @@ The application consists of:
 Email:
 
 ```text
-<your-admin-email>
+<harshkaushal@gmail.com>
 ```
 
 Password:
 
 ```text
-<your-admin-password>
+<12345678>
 ```
 
 ---
@@ -318,16 +318,7 @@ Server-side validation is performed before data is stored in the database.
 
 ---
 
-# Built For
-
-Built for the **Digital Heroes Internship Qualification Task**.
-
-Digital Heroes
-
-https://digitalheroesco.com
-
----
 
 # Author
 
-**<Your Name>**
+**<harsh kaushal>**

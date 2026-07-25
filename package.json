@@ -1,0 +1,14 @@
+{
+  "name": "digital",
+  "version": "1.0.0",
+  "description": "A full-stack lead capture application built as part of the **Digital Heroes Internship Qualification Task**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd frontend && npm install && npm run build && rm -rf ../backend/dist && cp -r dist ../backend/dist",
+    "start": "cd backend && npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

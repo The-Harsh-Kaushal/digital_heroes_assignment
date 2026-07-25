@@ -2,12 +2,19 @@ import "dotenv/config";
 
 import express from "express";
 import cors from "cors";
+import path from "path";
+import { fileURLToPath } from "url";
+
 import { connectDB } from "./database/db.js";
 import errorHandler from "./middlewares/error.js";
 import adminRoutes from "./routes/admin/index.js";
 import userRoutes from "./routes/user/index.js";
 
 const app = express();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+app.use(express.static(path.join(__dirname, "../public/dist")));
 
 app.use(
   cors({
@@ -26,11 +33,12 @@ app.get("/health", (req, res) => {
     message: "health is good",
   });
 });
-app.get("/", (req, res) => {
-  res.status(200).send("Welcome to my small project !");
-});
 
 app.use(errorHandler);
+
+app.use((req, res) => {
+  res.sendFile(path.join(__dirname, "../public/dist", "index.html"));
+});
 
 try {
   await connectDB();

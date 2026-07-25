@@ -227,22 +227,35 @@ backend/
 
 # Local Setup
 
-## Clone
+## 1. Clone the Repository
 
 ```bash
 git clone https://github.com/The-Harsh-Kaushal/digital_heroes_assignment.git
+cd digital_heroes_assignment
 ```
 
 ---
 
-## Backend
+## 2. Install Dependencies
+
+Install the dependencies for the frontend, backend, and the root project.
 
 ```bash
-cd backend
+cd frontend
+npm install
+
+cd ../backend
+npm install
+
+cd ..
 npm install
 ```
 
-Create a `.env` file.
+---
+
+## 3. Configure Environment Variables
+
+Create a `.env` file inside the `backend` directory.
 
 Example:
 
@@ -250,36 +263,38 @@ Example:
 PORT=5001
 MONGODB_URI=<your-mongodb-uri>
 JWT_SECRET=<your-secret>
+ADMIN_EMAIL=<your-admin-email>
+ADMIN_PASSWORD=<your-admin-password>
 ```
 
-Run
+> **Note:** The admin account is automatically created during the first application startup if it does not already exist.
+
+---
+
+## 4. Build the Frontend
+
+From the project root, build the React application and copy the production build to the backend.
 
 ```bash
-npm run dev
+npm run build
 ```
 
 ---
 
-## Frontend
+## 5. Start the Application
+
+From the project root, start the backend server.
 
 ```bash
-cd frontend
-npm install
+npm start
 ```
 
-Create a `.env` file.
+The application will be available at:
 
-```env
-VITE_API_BASE_URL=http://localhost:5001/api/v1
+```
+http://localhost:5001
 ```
 
-Run
-
-```bash
-npm run dev
-```
-
----
 
 # Deployment
 
